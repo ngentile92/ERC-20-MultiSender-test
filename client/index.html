@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiSender | Decentralized App</title>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Main Content Container -->
+    <div class="container py-5">
+      <!-- Two-column Layout -->
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <!-- Wallet Information -->
+          <div class="card card-body bg-dark rounded-0 mb-5">
+            <h1>
+              <span class="material-icons"> grid_view </span>
+              Multi Sender
+            </h1>
+            <h6 class="text-muted">A Decentralized Multi-Sender Application</h6>
+            <div class="d-flex align-items-center">
+              <span class="material-icons"> account_balance_wallet </span>
+              <span class="ms-2">Wallet</span>
+            </div>
+            <span id="account"></span>
+          </div>
+          <!-- File Upload Form -->
+      <form id="taskForm" class="card card-body bg-dark">
+        <label class="form-label" for="customFile">Select CSV File:</label>
+        <input id="fileInput" type="file" name="file" />
+      </form>
+      <br>
+      <!-- Send Button -->
+      <button class="btn btn-primary">Send Transactions</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="col-md-7">
+      <!-- Display Uploaded CSV Content -->
+      <div id="fileContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- External JavaScript Files -->
+<!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
+<script src="/libs/@truffle/contract/dist/truffle-contract.min.js"></script>
+<script src="./app.js"></script>
+<script src="./ui.js"></script>
+</body>
+</html>
